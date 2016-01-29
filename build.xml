@@ -1,0 +1,14 @@
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin"/>
+	<javac destdir="bin"
+	  compiler="com.google.errorprone.ErrorProneAntCompilerAdapter"
+	  encoding="UTF-8" debug="true"
+	  includeantruntime="false">
+	<src path="src"/>
+	<compilerclasspath>
+		<pathelement location="/home/samallen/error_prone_ant-2.0.7.jar"/>
+	</compilerclasspath>
+	</javac>
+    </target>
+</project>
